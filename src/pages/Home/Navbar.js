@@ -19,12 +19,12 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const tags = [
-  { id: 1, name: 'reactjs'},
-  { id: 2, name: 'javascript'},
-  { id: 3, name: 'dotnet'},
-  { id: 4, name: 'php'},
-  { id: 5, name: 'materialdesign'},
-  { id: 6, name: 'webdev'},
+  { id: 1, name: 'Supernatural'},
+  { id: 2, name: 'Friends'},
+  { id: 3, name: 'HowIMetYourMother'},
+  { id: 4, name: 'Prison Break'},
+  { id: 5, name: 'Stranger Things'},
+  { id: 6, name: 'Dexter'},
 ]
 
 
@@ -33,8 +33,8 @@ function Navbar() {
 
   return (
     <Paper className={classes.root}>
-      <Button variant='outlined' color='secondary' className={classes.button}>Registrar Grátis</Button>
-      <ListSubheader>{`tags em alta`}</ListSubheader>
+      <Button variant='outlined' color='secondary' className={classes.button}>Register for free</Button>
+      <ListSubheader>{`series trending`}</ListSubheader>
       {
         tags.map((item) => (
           <ListItem dense button key={`item.id}-${item.name}`}>
@@ -43,7 +43,7 @@ function Navbar() {
         ))
       }
       <ListItem button>
-        Exibis mais tags
+       show more series
       </ListItem>
     </Paper>
   )

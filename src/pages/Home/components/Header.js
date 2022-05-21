@@ -39,7 +39,7 @@ const classes = useStyles();
                  <img src='/images/logo.png' alt="logo" className={classes.img}/>
                  <div className={classes.grow}></div>
                  <div className={classes.userSection}>
-                    <Button  color='primary' variant='contained' className={classes.button}>Novo Post</Button>
+                    <Button  color='primary' variant='contained' className={classes.button}>New Post</Button>
                     <SvgIcon className={classes.bell}>
                         <Bell />
                     </SvgIcon>

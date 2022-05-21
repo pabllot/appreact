@@ -9,44 +9,45 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const posts = [
-  {
-    id: 1,
-    autor: {
-      name: 'Pablo Teixeira',
-      username: 'pabllot07',
-      avatar: 'images/avatars/pablo.jpg.jpeg'
-    },
-    title: 'The vampire diaries',
-    date: '19/04/1999',
-    description: 'very nice tv show',
-    hashtags: '#dotnet, #javascript',
-    image: "/images/posts/teste.png"
-    },
+
     {
-      id: 2,
-      autor: {
+      id: 1,
+      author: {
         name: 'Pablo Teixeira',
         username: 'pabllot07',
         avatar: 'images/avatars/pablo.jpg.jpeg'
       },
-      title: 'The vampire diaries',
-      date: '19/04/1999',
+      title: 'Breaking Bad',
+      date: 'January 8th, 2008',
       description: 'very nice tv show',
-      hashtags: '#dotnet, #javascript',
-      image: "/images/posts/teste.png"
+      hashtags: '#BreakingBad',
+      image: "/images/posts/bb.jpg"
       },
       {
-        id: 3,
-        autor: {
+        id: 2,
+        author: {
           name: 'Pablo Teixeira',
           username: 'pabllot07',
           avatar: 'images/avatars/pablo.jpg.jpeg'
         },
         title: 'The vampire diaries',
-        date: '19/04/1999',
+        date: 'September 10th, 2009',
         description: 'very nice tv show',
-        hashtags: '#dotnet, #javascript',
-        image: "/images/posts/teste.png"
+        hashtags: '#TheVampireDiaries',
+        image: "/images/posts/tvd.jpg"
+        },
+      {
+        id: 3,
+        author: {
+          name: 'Pablo Teixeira',
+          username: 'pabllot07',
+          avatar: 'images/avatars/pablo.jpg.jpeg'
+        },
+        title: 'Vikings',
+        date: 'March 3rd, 2013',
+        description: 'very nice tv show',
+        hashtags: '#Vikings',
+        image: "/images/posts/vk.jpg"
         },
   
 ]
