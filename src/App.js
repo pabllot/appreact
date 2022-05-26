@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import SignIn from "./pages/SignIn";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import theme from './theme';
-
+import './mock'
 
 function App() {
 

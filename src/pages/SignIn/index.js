@@ -4,12 +4,11 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
-import Avatar from '@material-ui/core/Avatar'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import Link from '@material-ui/core/Link'
-
+import { useNavigate } from 'react-router-dom'
+import axios from '../../utils/axios'
 
 const useStyles = makeStyles ((theme) => ({
     root: {
@@ -22,12 +21,6 @@ const useStyles = makeStyles ((theme) => ({
         backgroundRepeat: 'none',
         padding: theme.spacing(2),
         textAlign:'center'
-    },
-    avatar: {
-        background: theme.palette.primary.main,
-        marginBottom: theme.spacing(1), 
-        alignSelf: 'center',
-        justifySelf: 'center'    
     },
     button: {
         marginTop: theme.spacing(1)
@@ -51,6 +44,12 @@ function Copyright(){
 
 function SignIn() {
     const classes = useStyles();
+    const navigate = useNavigate();
+
+    function handleSignIn() {
+      axios.post('/api/home/login').then(response => console.log(response))
+
+    }
 
   return (
     <Grid container className={classes.root}>
@@ -58,25 +57,19 @@ function SignIn() {
       item
       container
       direction='column'
-      justify='center'
+      justifyContent='center'
       alignItems='center'
       md={7}
       className={classes.image}>
         <Typography style={{color: '#fff', fontSize: 25, lineHeight: '45px'}}>
-               <strong>Simplificando a forma de conectar desenvolvedores de software!</strong> 
-            </Typography>
-            <Typography variant="body2" style={{color: 'rgb(255, 255, 255, 0.7)', marginTop: 30, fontSize: 15, lineHeight: '30px'}}>
-                Compartilhe seu conhecimento com toda nossa rede de desenvolvedores de software.
+               <strong>Encontre as melhores avaliações de Séries da netflix!</strong> 
+        </Typography>
+        <Typography variant="body2" style={{color: 'rgb(255, 255, 255, 0.7)', marginTop: 30, fontSize: 15, lineHeight: '30px'}}>
+                Compartilhe seu conhecimento com toda nossa comunidade.
         </Typography>
       </Grid>
-      <Grid item md={5}>
-          <Box display="flex" flexDirection="column" alignItems="center" mt={8}>
-              <Avatar className={classes.avatar}>
-                 <LockOutlinedIcon />
-              </Avatar>
-              <Typography variant='h5'>
-                  Acesso
-              </Typography>
+        <Grid item md={5}>
+          <Box display="flex" flexDirection="column" alignItems='center'  mt={8}>
               <form className={classes.form}>
                 <TextField
                   variant='outlined'
@@ -103,10 +96,11 @@ function SignIn() {
                 <Button fullWidth
                 variant='contained'
                 color='primary'
-                className={classes.button}>
+                className={classes.button}
+                onClick={(handleSignIn)}>
                     Entrar
                 </Button>
-                <Grid container>
+                <Grid container> 
                     <Grid item>
                         <Link>Esqueceu sua senha?</Link>
                     </Grid>
@@ -117,7 +111,7 @@ function SignIn() {
               </form>
               <Copyright />
           </Box>
-      </Grid>
+        </Grid>
     </Grid>
 
 
